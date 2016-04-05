@@ -1,0 +1,15 @@
+#!/bin/sh -e
+export LOGNAME="vipin"
+export USER="vipin"
+export PATH="/home/vipin/yp/lunch/bitbake-1.17.0/build/scripts-2.7:/home/vipin/.local/bin/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export HOME="/home/vipin"
+export SHELL="/bin/bash"
+export TERM="xterm"
+do_get() {
+        echo omelet: less pepper > omelet.txt
+        echo omelet: egg >> omelet.txt
+
+}
+
+cd /home/vipin/yp/lunch/tmp
+do_get

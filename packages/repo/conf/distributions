@@ -1,0 +1,5 @@
+Suite: stable
+Codename: femto
+Architectures: arm
+Components: main
+Description: femto deb packages    

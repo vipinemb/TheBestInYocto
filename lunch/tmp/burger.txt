@@ -1,0 +1,8 @@
+burger: bun
+burger: cheese
+omelet: less pepper
+omelet: egg
+omelet: fry
+omelet: ready
+burger: toast bread and serve
+burger: ready

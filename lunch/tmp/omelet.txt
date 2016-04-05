@@ -1,0 +1,4 @@
+omelet: less pepper
+omelet: egg
+omelet: fry
+omelet: ready

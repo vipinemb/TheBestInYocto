@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+  # We use language features of Ruby that are not supported in Ruby 1.9.x or
+  # older.
+  #- 1.8.7
+  #- 1.9.2
+  #- 1.9.3
+  - 2.0.0
+  - 2.1.1
+  - 2.2.1
+script: rspec
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq rpm
+  - sudo apt-get install -qq lintian
