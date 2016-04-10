@@ -5,7 +5,7 @@ inherit autotools
 
 do_fetch() {
 	cd ${DLDIR};
-	wget -c http://ftp.gnu.org/gnu/bash/${PN}-${PV}.tar.gz
+	#wget -c http://ftp.gnu.org/gnu/bash/${PN}-${PV}.tar.gz
 }
 
 do_unpack() {
