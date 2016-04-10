@@ -3,8 +3,8 @@ do_configure() {
 	./configure --prefix=/usr		\
 	    --host=arm-none-linux-gnueabi	\
 #	    --build=i686-pc-linux-gnu		\
-	    LDFLAGS=-L${ROOTFS}/usr/lib		\
-	    CPPFLAGS=-I${ROOTFS}/usr/include	\
+	    LDFLAGS=-L${D}/usr/lib		\
+	    CPPFLAGS=-I${D}/usr/include	\
 }
 
 do_compile() {
@@ -14,5 +14,5 @@ do_compile() {
 
 do_install() {
 	cd ${PN}-${PV}
-	make install DESTDIR=${ROOTFS}
+	make install DESTDIR=${D}
 }

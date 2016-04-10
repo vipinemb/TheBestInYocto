@@ -5,15 +5,15 @@ inherit autotools
 
 do_fetch() {
 	cd ${DLDIR};
-	wget -c http://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz
+	wget -c http://ftp.gnu.org/gnu/bash/${PN}-${PV}.tar.gz
 }
 
 do_unpack() {
-	tar -x -f ${DLDIR}/bash-4.3.tar.gz
+	tar -x -f ${DLDIR}/${PN}-${PV}.tar.gz
 }
 
 do_install_append() {
-	mkdir -p ${ROOTFS}/bin
-	ln -s -f /usr/bin/bash ${ROOTFS}/bin/bash
-	ln -s -f /usr/bin/bash ${ROOTFS}/bin/sh
+	mkdir -p ${D}/bin
+	ln -s -f ${D}/usr/bin/bash ${D}/bin/bash
+	ln -s -f ${D}/usr/bin/bash ${D}/bin/sh
 }
