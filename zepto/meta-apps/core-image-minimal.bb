@@ -14,20 +14,20 @@ Description: Zepto deb packages
 EOF
 	reprepro -V removematched zepto '*'
 	reprepro -V includedeb zepto *.deb
-
 	cat << EOF > conf/multistrap.conf
-[Genral]
+[General]
 noauth=true
 bootstrap=Packages
 
 [Packages]
-package=${RDEPENDS}
-source=copy:///${B}
+packages=${RDEPENDS}
+source=copy://${B}
 suite=zepto
 omitdebsrc=true
 EOF
 	rm -rf ${ROOTFS}
-	/usr/sbin/multistrap	\
+	echo "test -${RDEPENDS}"
+	/usr/sbin/multistrap		\
 	    -a arm		\
 	    -d ${ROOTFS}	\
 	    -f conf/multistrap.conf
