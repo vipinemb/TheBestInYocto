@@ -12,6 +12,13 @@ do_compile() {
 	make
 }
 
+do_package() {
+	fpm -f -s dir -t deb			\
+	    -n ${PN} -v ${PV}			\
+	    -a "arm" -C ${D}			\
+	    --description "${DESCRIPTION}"
+}
+
 do_install() {
 	cd ${PN}-${PV}
 	make install DESTDIR=${D}
