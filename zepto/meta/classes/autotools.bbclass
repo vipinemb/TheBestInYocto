@@ -12,13 +12,6 @@ do_compile() {
 	make
 }
 
-do_staging[dirs] = "${STAGING}"
-
-do_staging() {
-	mkdir -p ${STAGING}/usr
-	cp -rf ${D}/usr/lib ${D}/usr/include ${STAGING}/usr
-}
-
 do_install() {
 	cd ${PN}-${PV}
 	make install DESTDIR=${D}

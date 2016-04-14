@@ -3,6 +3,8 @@ PV = "458"
 
 inherit autotools
 
+DEPENDS = "ncurses"
+
 do_fetch() {
 	cd ${DLDIR}
 	#wget -c http://ftp.gnu.org/gnu/less/${PN}-${PV}.tar.gz
