@@ -5,7 +5,7 @@ addtask compile after do_configure
 addtask install after do_compile
 addtask staging after do_install
 addtask package after do_staging
-addtask build after do_package
+addtask rootfs after do_package
 
 do_configure[deptask] = "do_staging"
 
