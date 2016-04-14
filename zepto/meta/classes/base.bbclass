@@ -8,5 +8,6 @@ addtask package after do_staging
 addtask rootfs after do_package
 
 do_configure[deptask] = "do_staging"
+do_rootfs[rdeptask] = "do_package"
 
 PF = "${PN}" 
